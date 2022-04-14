@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a0c636c9ef.js" crossorigin="anonymous"></script>    
+</head>
+<body>
+    <div class="container">
+        <div class="buttonsForm">
+            <div class="btnColor"></div>
+            <button id="btnSignIn">Sign In</button>
+            <button id="btnSignUp">Sign Up</button>
+        </div>
+
+        <form id="signIn">
+            <input type="text" placeholder="Email" required >            
+            <input type="password" placeholder="Password" pattern="(?=(.*[0-9]))((?=.*[A-Za-z0-9])(?=.*[a-z]))^.{8,}$" required>                        
+            <div class="divCheck">
+                <input type="checkbox">
+                <span>Remember Password</span>
+            </div>
+            <button type="submit">Sign In</button>
+        </form>
+    
+    <form name="signUp" id="signUp">
+            <input type="text" placeholder="Email" required>            
+            <input type="password" name="pwd" placeholder="Password" pattern="(?=(.*[0-9]))((?=.*[A-Za-z0-9])(?=.*[a-z]))^.{8,}$" required>            
+            <input type="password" name="cpwd" placeholder="Confirm Password" pattern="(?=(.*[0-9]))((?=.*[A-Za-z0-9])(?=.*[a-z]))^.{8,}$" required> 
+            <ul class="password_requirements">
+                <li> Minimum 8 characters </li>
+                <li> At least one symbol</li>
+                <li> At least one uppercase and one lowercase letter </li>
+                <li> At least one number</li>
+            </ul>           
+            <div class="divCheck">
+                <input type="checkbox">
+                <span>Terms</span>
+            </div>
+            <button type="submit" onclick=" return validate()">Sign Up</button>
+        </form>    
+    </div>   
+    <script src="index.js"></script>
+</body>
+</html>
+
